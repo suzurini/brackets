@@ -26,6 +26,7 @@ module.exports = function check(str, bracketsConfig) {
           }
         }
       }
+    n += 2;
     }
   }
   return result;
