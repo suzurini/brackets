@@ -11,9 +11,9 @@ module.exports = function check(str, bracketsConfig) {
       i++;
       if (str.indexOf(findBrackets) !== -1) {
         let numberChar = str.indexOf(findBrackets);
-        if (numberChar > 1) {
+        if (numberChar >= 1) {
           str = str.slice(0, numberChar) + str.slice(numberChar + 2);
-          n += 2;
+          // n += 2;
         }
         else {
           if ((str.length - 2) > numberChar) {
