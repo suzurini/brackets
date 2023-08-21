@@ -15,8 +15,15 @@ module.exports = function check(str, bracketsConfig) {
           n += 2;
         }
         else {
-          str='';
-          result = true;
+          if ((str.length - 2) > numberChar) {
+            str=str.slice(numberChar + 2);
+          }
+          else {
+            str = '';
+          }
+          if (str.length == 0) {
+            result = true;
+          }
         }
       }
     }
